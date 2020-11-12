@@ -25,3 +25,7 @@ for ( let i=lineCount; i>=1; i--){
     }
     console.log(result);
 }
+let i=1
+for(i=1; i>0 ; i++ ){
+    console.log(i)
+};

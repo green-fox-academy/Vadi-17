@@ -1,0 +1,96 @@
+body {
+  margin: 3px;
+  font-family: 'Courier Prime', monospace;
+  background-image:url("assets/topography.png");
+  padding: 4px;
+     
+}
+
+nav{
+position: sticky;
+margin-top: -55px ;
+top: 0;
+background-color: #333333;
+
+}
+.Logo{
+position:fixed;
+z-index: 1;
+width:37px;
+height:38px;
+left:10%;
+top: 3px;
+}
+ul { 
+  margin: 5px auto 0;
+  position: relative;
+  left: 15%;
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  width: 660px;
+  text-align: center;
+  }
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 3px 0;
+  
+  }
+li a {
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #ff0099;
+  font-size: 19px;
+  display: inline-block;
+  padding: 9px 20px;
+  position: relative;
+}
+li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  background: #ff0099;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+li a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+article {
+width: 80%;
+margin: auto;
+}
+
+hr {
+border-top: 2px dashed;
+width: 25px;
+}  
+h1{font-size:64px;}
+h2{
+font-size:48px;
+text-align:center;
+padding-top: 50px;
+
+}
+h3{
+font-size:36px;
+text-align:left;
+}
+h4{font-size:24px;}
+p{font-size:20px;}
+
+#MyFooter
+{
+color: #FFFFFF;
+background-color: #ff0099;
+vertical-align: middle;
+text-align: center;
+}
