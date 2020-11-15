@@ -4,12 +4,16 @@
 // hanyadik karaktertől fordul elő a második paraméterként megadott string.
 // -1-gyel tér vissza (return) ha nem található meg a második paraméter
 // az első paraméterként megadott string-ben
+'use strict';
+
+console.log(substr("ksdjfhsopikjfhuedgtrhtfh", "opi"))
 
 function substr(str, keyword) {
-    return -1;
+    return str.indexOf(keyword);
 }
 
-// Példa
+// Példák
+console.log(substr("ksdjfhsopikjfhuedgtrhtfh", "opi"))
 
 // eredmény: `17`, mert a 'searching' a 17. indextől található meg.
 console.log(substr('this is what I\'m searching in', 'searching'));
