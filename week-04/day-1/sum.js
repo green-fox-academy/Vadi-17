@@ -4,9 +4,9 @@
 console.log(sum(17))
 
 function sum(number){
-    let szumma =0;
+    let sumNumber =0;
     for(let i=1 ; i <= number ; i++){
-        szumma = szumma + i
+        sumNumber = sumNumber + i
     }
-    return szumma
+    return sumNumber
 }
