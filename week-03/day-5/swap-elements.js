@@ -10,7 +10,7 @@ const names = ["Arthur", "Boe", "Chloe"];
 console.log("The result with reverse :" , names.reverse());
 
 // for other cases
-names.reverse();
+names.reverse();           //reset
 let tempNum = names [2];
 names [2] = names [0];
 names [0] = tempNum;
