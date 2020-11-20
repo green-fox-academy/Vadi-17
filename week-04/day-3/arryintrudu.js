@@ -39,6 +39,7 @@ for (let i = 0; i < names.length; i++) {
 
 // Töröld a második elemet a tömbből!
 names.splice(1, 1);
+
 // Iterálj végig a tömbön fordított sorrendben, és írasd ki az összes nevet!
 console.log("Iterálj végig a tömbön fordítva: ")
 for (let i = names.length - 1; i >= 0; i--) {
@@ -47,9 +48,6 @@ for (let i = names.length - 1; i >= 0; i--) {
 
 // Távolítsd el a lista összes elemét!
 names.splice(0,names.length);
-
-console.log(names);
-
 
 function showNamesLength() {
     console.log("display length is: " + names.length);
