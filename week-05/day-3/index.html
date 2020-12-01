@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" style="border: solid 1px;"></canvas>
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        canvas.with = 800;
+        canvas.height = 500;
+        ctx.strokeStyle = "green";
+        for (let i = 10; i < 55; i = i + 10) {
+            ctx.strokeRect(i, i, i * 1.2, 200);
+            ctx.fillRect(i, i, 100, 100);
+            ctx.fillRect(i, i, i, i);
+        }
+        ctx.fillStyle = 'yellow';
+        ctx.fillRect(110, 110, 100, 100);
+
+        ctx.beginPath();
+        ctx.moveTo(210, 210);
+        ctx.lineTo(300, 300);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(50, 350, 40, 0, Math.PI * 1);
+        ctx.stroke();
+        ctx.strokeStyle = 'blue';
+        ctx.beginPath();
+        ctx.moveTo(170, 170);
+        ctx.lineTo(200, 250);
+        ctx.lineTo(220, 180);
+        ctx.closePath();
+        ctx.stroke();
+
+        // ctx.fillRect(10, 200, 200, 150);
+        // ctx.strokeStyle = 'yellow';
+        // ctx.LineWidth = 5;
+        // ctx.strokeStyle = 'red';
+        // ctx.fillRect = (20, 290, 160, 110);
+        // ctx.LineWidth = 12;
+        // ctx.strokeRect = (20, 290, 160, 110);
+        // ctx.stroke();
+
+    </script>
+</body>
+
+</html>
