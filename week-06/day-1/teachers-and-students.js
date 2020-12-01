@@ -40,6 +40,6 @@ const prof = new Teacher("Attila");
 
 prof.answer("it is possible to create perpetuum mobile");
 
-study.question(prof, "Mik a jövőheti nyerő Lotto számok?");
+study.question(prof, "Mik a jövőheti nyerő Lottó számok?");
 
 prof.teach(study,"Mi a Baja?");
