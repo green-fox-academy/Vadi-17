@@ -26,13 +26,12 @@ class Sharpie {
 }
 try {
 
-    let filctoll1 = new Sharpie("green",2);
+    let filctoll1 = new Sharpie("blue",2);
     console.log('Before used: ' ,filctoll1);
     filctoll1.use();
     console.log('After used: ' , filctoll1);
 
 } catch (error) {
-
     console.log(error.message);
-
+    
 }
