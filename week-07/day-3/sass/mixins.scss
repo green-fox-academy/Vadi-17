@@ -1,0 +1,19 @@
+@mixin reset-data {
+    background-color: #acac27;
+    font-size: 50px;
+    margin: 35px;
+  }
+
+
+body {
+    @include reset-data;
+   p {
+    @include reset-data;
+  }
+   p section {
+    @include reset-data;
+  }
+   p div {
+    @include reset-data;
+  }
+}

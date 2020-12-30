@@ -13,3 +13,4 @@ function add(a,b){
 import Lion from './lion.js';
 let hh = new Lion("gg");
 console.log(hh);
+console.log();

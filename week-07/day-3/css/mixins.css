@@ -1,0 +1,22 @@
+body {
+  background-color: #acac27;
+  font-size: 50px;
+  margin: 35px;
+}
+body p {
+  background-color: #acac27;
+  font-size: 50px;
+  margin: 35px;
+}
+body p section {
+  background-color: #acac27;
+  font-size: 50px;
+  margin: 35px;
+}
+body p div {
+  background-color: #acac27;
+  font-size: 50px;
+  margin: 35px;
+}
+
+/*# sourceMappingURL=mixins.css.map */

@@ -11,8 +11,6 @@ let wildPokemon = new Pokemon('Oddish', 'leaf', 'water');
 // Melyik Pokemont használja Ash?
 // Implementáld az alábbi `chooseEffective` függvényt, hogy Ash a hatékony pokémont válassza.
 console.log(`${chooseEffective(pokemonOfAsh, wildPokemon)}, teged valasztalak!`);
-// console.log("wildPokemon : : :" , wildPokemon);
-// console.log("pokemonOfAsh  : : :" , pokemonOfAsh);
 
 function initializePokemon() {
     return [

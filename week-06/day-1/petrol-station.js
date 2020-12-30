@@ -30,7 +30,6 @@ class Car {
     capacity;
     constructor(carType, gasAmount, capacity) {
         this.carType = carType;
-        console.log(typeof gasAmount);
         this.gasAmount = typeof gasAmount === 'number' ? gasAmount : 0;
         this.capacity = typeof capacity === 'number' ? capacity : 100;
     }

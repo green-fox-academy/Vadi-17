@@ -16,6 +16,7 @@ function countsowsInString(fileName) {
             return 0
         } else {
             let fileContentArry = fileContent.split('\n');
+            console.log(fileContent);
             return fileContentArry.length;
         }
     }

@@ -1,0 +1,9 @@
+.d-flex{
+    display: inline-flexbox;
+    color: blue;
+}
+.col{
+    background-color: burlywood;
+    border: crimson;
+    border-style: double;
+}
