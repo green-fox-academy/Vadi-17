@@ -1,4 +1,49 @@
 'use strict';
+import Lollipop from "./Lollipop.js";
+import HardCandy from "./HardCandy.js";
+
+export class CandyShop {
+    amountOfSugar = 0;
+    inventory = [];
+    income = 0;
+
+    constructor(amountOfSugar) {
+        this.amountOfSugar = amountOfSugar;
+        this.inventory = [];
+        this.income = 0;
+    }
+    createCandy(creatTypeOfCandy) {
+        this.inventory.push(new HardCandy());
+
+ 
+        console.log(creatTypeOfCandy);
+        console.log(this.amountOfSugar);
+        // console.log(HardCandy.amountOfSugar);
+        if (creatTypeOfCandy === "HardCandy") {
+            if (this.amountOfSugar >= HardCandy.amountOfSugar) {
+                this.inventory.push(new HardCandy());
+                this.amountOfSugar -= HardCandy.amountOfSugar;
+            } else {
+                console.log("itt dobni egy nincs elég cukor hibát");
+            }
+        }
+        if (creatTypeOfCandy === "Lollipop") {
+            if (this.amountOfSugar >= Lollipop.amountOfSugar) {
+                this.inventory.push(new Lollipop());
+                this.amountOfSugar -= Lollipop.amountOfSugar;
+            } else {
+                console.log("itt dobni egy nincs elég cukor hibát");
+            }
+        }
+    }
+    raisePrice(raiseAmount) {
+        // this.inventory.forEach(item => item.)
+    }
+}
+
+
+
+
 
 
 
