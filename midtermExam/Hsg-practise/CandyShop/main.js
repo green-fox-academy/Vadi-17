@@ -22,12 +22,24 @@ let myBusiness = new CandyShop(30000);
 console.log("na itt");
 console.log(myBusiness.amountOfSugar);
 console.log("...");
-myBusiness.createCandy("HardCandy");
-myBusiness.createCandy("HardCandy");
-myBusiness.createCandy("HardCandy");
-myBusiness.createCandy("Lollipop");
-myBusiness.createCandy("Lollipop");
-myBusiness.createCandy("Lollipop");
-myBusiness.createCandy("Lollipop");
+
 console.log("hhhh");
 console.log(myBusiness);
+myBusiness.createCandy(new HardCandy);
+myBusiness.createCandy(new Lollipop);
+myBusiness.createCandy(new HardCandy);
+myBusiness.createCandy(new Lollipop);
+myBusiness.createCandy(new Lollipop);
+myBusiness.createCandy(new Lollipop);
+console.log(myBusiness);
+myBusiness.raisePrice(25)
+
+myBusiness.sell(1);
+console.log(CandyShop.priceOfSugar);
+
+CandyShop.priceOfSugar = 800;
+console.log(CandyShop.priceOfSugar);
+console.log(myBusiness);
+myBusiness.buySugar(1);
+
+console.log(myBusiness.toString());

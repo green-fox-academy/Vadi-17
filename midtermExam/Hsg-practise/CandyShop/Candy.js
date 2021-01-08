@@ -6,10 +6,16 @@ export default class Candy {
         this.price = price
         this.amountOfSugar = amountOfSugar;
     }
-    getsugar(){
+    getSugar(){
         return this.amountOfSugar;
     }
-    getprice(){
+    getPrice(){
         return this.price;
+    }
+    setPrice(price){
+        this.price =price ;
+    }
+    increase(price){
+        this.price += price;
     }
 }

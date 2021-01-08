@@ -6,38 +6,55 @@ export class CandyShop {
     amountOfSugar = 0;
     inventory = [];
     income = 0;
+    static priceOfSugar = 600;
 
     constructor(amountOfSugar) {
         this.amountOfSugar = amountOfSugar;
         this.inventory = [];
         this.income = 0;
     }
-    createCandy(creatTypeOfCandy) {
-        this.inventory.push(new HardCandy());
-
- 
-        console.log(creatTypeOfCandy);
-        console.log(this.amountOfSugar);
-        // console.log(HardCandy.amountOfSugar);
-        if (creatTypeOfCandy === "HardCandy") {
-            if (this.amountOfSugar >= HardCandy.amountOfSugar) {
-                this.inventory.push(new HardCandy());
-                this.amountOfSugar -= HardCandy.amountOfSugar;
-            } else {
-                console.log("itt dobni egy nincs elég cukor hibát");
-            }
+    createCandy(candy) {
+        const needSugar = candy.getSugar();
+        if (needSugar > this.amountOfSugar) {
+            throw new Error('There is not enough sugar')
         }
-        if (creatTypeOfCandy === "Lollipop") {
-            if (this.amountOfSugar >= Lollipop.amountOfSugar) {
-                this.inventory.push(new Lollipop());
-                this.amountOfSugar -= Lollipop.amountOfSugar;
-            } else {
-                console.log("itt dobni egy nincs elég cukor hibát");
-            }
-        }
+        this.amountOfSugar -= needSugar
+        this.inventory.push(candy);
     }
+
     raisePrice(raiseAmount) {
-        // this.inventory.forEach(item => item.)
+        // this.inventory.forEach ( (valami) => valami.setPrice(valami.getPrice() + raiseAmount));
+        this.inventory.forEach((unit) => unit.increase(raiseAmount));
+    }
+    sell(amountOfSell) {
+        const peaceOfCandy = this.inventory.length;
+        amountOfSell = ((amountOfSell <= peaceOfCandy) ? amountOfSell : peaceOfCandy)
+        const sellArray = this.inventory.splice(0, amountOfSell);
+        let sumNum = 0;
+        sellArray.forEach((elem) => { sumNum += elem.getPrice() });
+        this.income += sumNum;
+    }
+    buySugar(byOfSugar) {
+        let priceOf_Sugar = CandyShop.priceOfSugar;
+        if (byOfSugar * priceOf_Sugar > this.income) {
+            throw new Error('There is not enough many for buy sugar')
+        }
+        this.amountOfSugar += (byOfSugar * 1000);
+        this.income -= (byOfSugar * priceOf_Sugar);
+    }
+    toString() {
+        let sumLollipop = 0;
+        let sumHardCandy = 0;
+        this.inventory.forEach((candy) => {
+            if (candy instanceof Lollipop) {
+                sumLollipop++;
+            } else if (candy instanceof HardCandy) {
+                sumHardCandy++;
+            }
+        });
+        let textString = `Készlet: ${sumHardCandy} cukorka, ${sumLollipop} nyalóka; Bevétel: ${this.income} Ft; Cukor: ${this.amountOfSugar} gramm`;
+
+        return textString
     }
 }
 
