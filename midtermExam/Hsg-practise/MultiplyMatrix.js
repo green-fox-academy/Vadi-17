@@ -2,24 +2,25 @@
 // multiplies each even number by 2 in each odd indexed row,
 // returns the modified matrix.
 'use strict';
-let firstArry = [
+let firstArray = [
     [1, 3, 6, 2],
     [4, 5, 6, 1],
     [3, 3, 1, 5],
     [9, 0, 5, 2]
 ];
 
-console.log(multiplyMatrixItems(firstArry));
+let value = 23
+console.log(multiplyMatrixItems(firstArray));
 
-function multiplyMatrixItems(firstArry) {
-    let sizeArry = firstArry.length
-    let resultArry = JSON.parse(JSON.stringify(firstArry));
-    for (let i = 1; i < sizeArry; i += 2) {
-        for (let j = 0; j < sizeArry; j++) {
-            if (!(resultArry[i][j] % 2)) {
-                (resultArry[i][j] *=2);
+function multiplyMatrixItems(firstArray) {
+    let sizeArray = firstArray.length
+    let resultArray = JSON.parse(JSON.stringify(firstArray));
+    for (let i = 1; i < sizeArray; i += 2) {
+        for (let j = 0; j < sizeArray; j++) {
+            if (!(resultArray[i][j] % 2)) {
+                (resultArray[i][j] *=2);
             }
         }
     }
-    return resultArry;
+    return resultArray;
 }
