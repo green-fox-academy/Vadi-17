@@ -1,0 +1,25 @@
+body {
+    box-sizing: border-box;
+    border: 0px
+  
+  }
+  
+  .container {
+    background-color: rgb(255, 214, 42);
+    padding: 0px;
+    height: 300px;
+    width: auto;
+    display: block;
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    justify-content: flex-end;
+  }
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(176, 42, 255);
+    flex-direction: row;
+    margin-left: 8px;
+}

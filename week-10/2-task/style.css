@@ -1,0 +1,27 @@
+
+body {
+  box-sizing: border-box;
+
+}
+
+.container {
+  background-color: rgb(255, 214, 42);
+  height: 300px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .yellow {
+  background-color: rgb(255, 214, 42);
+  height: 300px;
+  width: 800px;
+
+} */
+
+.purple {
+  background-color: rgb(176, 42, 255);
+  height: 100px;
+  width: 100px;
+}

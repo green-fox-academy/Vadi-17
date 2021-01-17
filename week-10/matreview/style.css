@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: linear-gradient(to top, #fdbcb6 0%, #f5efef 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Yusei Magic', sans-serif;
+  }
+  
+  .container {
+    border: 1px solid #2f004f;
+    width: 650px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+   /*
+  .under{
+    text-decoration: underline;
+  }
+  .over{
+    text-decoration: overline;
+  }
+  .line{
+    text-decoration: line-through;
+  }
+  button{
+    border: 2px solid palevioletred;
+    background-color:  palevioletred;
+  }
+  .link{
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  .link:visited{
+    color: black;
+  }
+  button:hover{
+     background-color:  rgb(218, 67, 117);
+   } 
+  .bold{
+    font-weight: bold;
+  }
+  .bold-number{
+    font-weight: 700;
+  }
+  .normal{
+    font-weight: 100;
+  }
+  .upper{
+    text-transform: uppercase;
+  }
+  .lower{
+    text-transform: lowercase;
+  }
+  .capital{
+    text-transform: capitalize;
+  }
+  .none{
+    text-transform: none;
+  }
+  .space-5px{
+    letter-spacing: 0.1px;
+  }
+  .space-half{
+    letter-spacing: 0.5em;
+  }
+  .line-height{
+    line-height: 60px;
+  }
+  p a{
+    text-decoration: none;
+  }  */
+ 
+  
+
+
+
+/* 
+  
+    .box {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+  }
+  
+  .red {
+    background-color: rgb(202, 57, 57);
+    position: fixed;
+    top: 0px;
+    left: 70px;
+    z-index: 7;
+    /* z-index: 1; */
+  /* }
+  .blue {
+      background-color: rgb(60, 60, 245);
+      position: absolute;
+      top: 0px;
+      left: px;
+      z-index: 3;
+    }
+    .purple {
+        background-color: rgb(145, 41, 145);
+    } 
+    .green {
+      background-color: rgb(36, 145, 36);
+      position: relative;
+      top: 00px;
+      righ: 80px;
+    }
+     */
+
+
+
+.box {
+    width: 150px;
+    height: 150px;
+  }
+  .red {
+    background-color: rgb(202, 57, 57);
+    float: right;
+  }
+  .green {
+    background-color: rgb(36, 145, 36);
+    float: right;
+  }
+  .blue {
+    background-color: rgb(60, 60, 245);
+    float: right;
+  }
+  .purple {
+    background-color: rgb(145, 41, 145);
+    float: right;
+  }
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .text {
+    width: 650px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .snowy {
+    width: 200px;
+    float: left;
+  }
+  .snowy::after {
+    content: '';
+    display: block;
+    clear: right;
+  } 
+  
+  
