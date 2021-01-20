@@ -1,0 +1,25 @@
+body {
+    /* box-sizing: border-box; */
+    border: 10px
+  
+  }
+  
+  .container {
+    padding: 20px;
+    height: 700px;
+    width: 700px;
+    display: block;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+    background-color: rgb(255, 214, 42);
+  }
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(176, 42, 255);
+    flex-direction: row;
+    margin-right: 5px;
+}

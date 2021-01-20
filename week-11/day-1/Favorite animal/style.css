@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    border: 0px;
+    background-color: rgb(243, 228, 169);
+}
+
+.login-form {
+    background-color: #eeeec2;
+    width: 27%;
+    margin: 7% auto;
+    padding:3% 3% 10% 10%;
+}
+input {
+    padding: 1%;
+}
+label {
+    padding: 1%;
+}
+

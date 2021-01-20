@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movi selector</title>
+</head>
+
+<body>
+    <form class="login-form" method="post" action="">
+        <h2>Movie Selector</h2>
+
+        <select id="genre" name="genre" autofocus required>
+            <option selected disabled value="selectgen">Select a genre</option>
+            <option value="scifi">Sci-fi</option>
+            <option value="drama">Dráma</option>
+            <option value="comedy">Vígjáték</option>
+        </select>
+        <select id="movies" name="movies" >
+            <option class="scifi" selected disabled value="selectmov">Select a movie</option>
+            <option class="scifi" value="Moon">Hold</option>
+            <option class="scifi" value="2001ASpaceOdyssey">Űrodüsszeia</option>
+            <option class="scifi" value="Contact">Kapcsolat</option>
+            <option class="drama" value="DarkestHour">A legsötétebb óra</option>
+            <option class="drama" value="ThereWillBeBlood">Vérző olaj</option>
+            <option class="drama" value="AmericanBeauty">Amerikai szépség</option>
+            <option class="comedy" value="Airplane!">Airplane!</option>
+            <option class="comedy" value="Deadpool">Deadpool</option>
+            <option class="comedy" value="WaynesWorld">Wayne világa</option>
+        </select>
+        <br>
+        <button type="button" onclick="addFunction()">Insert új kategória</button>
+        <div class="result"></div>
+
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

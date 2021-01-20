@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>Account Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tiny.cloud/1/jt0au9351bz0z5n6g9e9uekx122crnpjw65tlgds49dtn0n4/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>ACCOUNT LOGIN</h3>
+        <form class="login-form" method="post" action="">
+            <label for="name" class="form-label">USERNAME</label>
+            <input type="text" class="form-control" name="name" id="name" required autofocus>
+            <label for="password" class="form-label">PASSWORD</label>
+            <input type="password" name="password" id="password" required>
+            <i class="far fa-eye" id="togglePassword"></i>
+            <div class="forgot-password">
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            <button type="submit">Login</button>
+            <br>
+            <label for="introduction" class="form-control">Bemutatkozás teszt</label>
+            <textarea name="introduction" id="intro" cols="auto" rows="3"></textarea>
+
+        </form>
+        <p id="log">Név:</p>
+        <p id="passw"></p>
+    </div>
+    <textarea id="mytextarea" name="mytextarea">
+        TinyMCE editor test
+      </textarea>
+    <script src="main.js"></script>
+</body>
+
+</html>
