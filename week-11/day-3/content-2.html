@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+</head>
+
+<body>
+    <ul>
+        <li>placeholder</li>
+        <li>placeholder</li>
+        <li>placeholder</li>
+        <li>placeholder</li>
+    </ul>
+    <script>
+        const newUl = ['apple', 'banana', 'cat', 'dog'];
+        let ul = document.querySelectorAll('li');
+        console.log(ul);
+        for (let i = 0; i < ul.length; i++) {
+            ul[i].textContent = newUl[i];
+            ul[i].style.backgroundColor = 'limegreen';
+        }
+
+    </script>
+
+    <!--
+      Dolgozhatsz a HTML script tag-en belül, vagy külön js fájlban is,
+      utóbbi esetén ne felejtsd el beimportálni a js fájlt az alábbi módon:
+      <script src="content-2.js"></script>
+    <script>
+      1) cseréld le a lista elemek tartalmát az alábbi lista elemeire
+      ['apple', 'banana', 'cat', 'dog']
+      2) változtasd meg az <ul> elem háttérszínét lime zöldre ('limegreen')
+        használd a 'class'-t a style tulajdonság helyett
+    </script>
+  -->
+</body>
+
+</html>

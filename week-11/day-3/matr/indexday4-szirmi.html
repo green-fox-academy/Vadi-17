@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <link rel="stylesheet" href="styleday4.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" data-div="alma-div" class="menu-active">alma</a></li>
+                <li><a href="#" data-div="banan-div">banán</a></li>
+                <li><a href="#" data-div="citrom-div">citrom</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="alma-div" class="tab-content tab-active">
+            <div>
+                <form>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </form>
+                <div class="arrows">
+                    <span class="up-arrow">⟰</span>
+                    <span class="down-arrow">⟱</span>
+                </div>
+            </div>
+            <div id="messages">
+                <p>Messages:</p>
+            </div>
+        </div>
+        <div id="banan-div" class="tab-content"></div>
+        <div id="citrom-div" class="tab-content"></div>
+    </main>
+    <footer>
+        <div id="screen-width">
+            Screen-width: <span>-</span>px
+        </div>
+        <div id="screen-height">
+            Screen-height: <span>-</span>px
+        </div>
+    </footer>
+
+    <script src="indexday4.js"></script>
+    <script>
+        const liNodeList = document.querySelectorAll('ul li');
+        const liArray = Array.from(liNodeList);
+    </script>
+</body>
+</html>

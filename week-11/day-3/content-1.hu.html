@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+</head>
+
+<body>
+    <p class="apple">apple</p>
+    <p class="balloon">ba<strong>na</strong>na</p>
+    <p class="cat">car</p>
+    <p class="animals">goat rabbit <strong>cat</strong> dog</p>
+
+    <script>
+        workValue = document.querySelectorAll("p");
+        for (let i = 1; i < workValue.length; i++) {
+            workValue[i].innerHTML = workValue[i].innerHTML + " " + workValue[i - 1].innerHTML;
+        }
+
+    </script>
+
+</body>
+
+</html>

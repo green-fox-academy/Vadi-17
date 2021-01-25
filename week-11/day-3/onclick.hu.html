@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: onclick</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            height: 100vh;
+        }
+
+        .party {
+            background: url(https://media.giphy.com/media/4c4jQPdVv381G/giphy.gif);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button>Party</button>
+    </div>
+    <script>
+        'use strict';
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+        button.onclick = () => {
+            body.classList.toggle('party');
+            // alert('Green Fox!');
+        };
+
+
+
+        // let body = document.querySelector('body');
+        // button.addEventListener('click', partyOn);
+
+        // function partyOn(event) {
+        //     body.classList.toggle('party');
+        // }
+
+
+    </script>
+
+
+    <!--
+
+      A gomb megnyomásával indítsd el a party-t,
+      ismételt megnyomással pedig kapcsold ki.
+      (Tehát ha már megy a buli, gombnyomásra "állítsd le", és fordítva.)
+      A bulinak az EGÉSZ OLDALON zajlania kell! :)
+    </script>
+   -->
+</body>
+
+</html>

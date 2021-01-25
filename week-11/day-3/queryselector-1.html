@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: QuerySelector</title>
+</head>
+
+<body>
+    <section class="container">
+        <div id="b325" class="asteroid">The King</div>
+        <div class="asteroid b326">The Conceited Man</div>
+    </section>
+    <p class="asteroid big">The Businessman</p>
+    <div class="asteroid b329 big">The Lamplighter</div>
+    <p id="log"></p>
+
+
+
+    <script>
+        //   1. store the element that says 'The King' in the 'king' variable.
+        //   console.log it. tárold a 'King' elemet a 'king' változóban. konzol.naplózza.
+        const log = document.getElementById('log')
+        const king = document.getElementById("b325");
+        console.log(king);
+        const king2 = document.querySelector("#b325");
+        console.log(king2);
+
+        king.textContent = "Haha"
+        log.textContent = "ClassName:" + king.className + "  Text: " + king.textContent + " ID: " + king.id
+
+        //   2. store 'The Businessman' and 'The Lamplighter'
+        //   in the 'businessLamp' variable.
+        //   console.log each of them.
+        console.log(king.textContent);
+        const businessLamp = document.querySelectorAll('.asteroid.big');
+
+        for (let i = 0; i < businessLamp.length; i++) {
+            console.log(businessLamp[i]);
+        }
+
+        //   3. store 'The King' and 'The Conceited Man'
+        //   in the 'conceitedKing' variable.
+        //   alert them one by one.
+        console.log(king.textContent);
+        // const conceitedKing = document.querySelectorAll('#b325, .asteroid.b326');
+        const conceitedKing = document.querySelectorAll('.container .asteroid');
+        for (let i = 0; i < conceitedKing.length; i++) {
+            console.log(conceitedKing[i]);
+        }
+
+        //   4. store 'The King', 'The Conceited Man' and 'The Lamplighter'
+        //   in the 'noBusiness' variable.
+        //   console.log each of them.
+        console.log(king.textContent);
+        const noBusiness = document.querySelectorAll('.container .asteroid, .b329');
+        for (let i = 0; i < noBusiness.length; i++) {
+            console.log(noBusiness[i]);
+        }
+
+    </script>
+
+</body>
+
+</html>

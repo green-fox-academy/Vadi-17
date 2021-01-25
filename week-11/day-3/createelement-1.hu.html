@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: CreateElement</title>
+</head>
+
+<body>
+    <ul class="aszteroidák">
+        <li id="b325" class="aszteroida">The King</li>
+        <li class="aszteroida b326">The Conceited Man</li>
+    </ul>
+    <div class="container"></div>
+    <script>
+        const greenFox = document.createElement('li');
+        greenFox.textContent = 'The Green Fox';
+        document.querySelector('.aszteroida').appendChild(greenFox);
+
+        const lampLighter = document.createElement('li');
+        lampLighter.textContent = 'The Lamplighter';
+        document.querySelector('.aszteroida').appendChild(lampLighter);
+
+        const heading = document.createElement('h3');
+        heading.textContent = 'Tudok elemeket hozzáadni a DOM-hoz!';
+        document.querySelector('.container').appendChild(heading);
+
+        const picture = document.createElement('img');
+        picture.src = 'https://kreativliget.hu/wp-content/uploads/2019/10/picasso-fordulatos-elete.jpg';
+        picture.alt = 'picasso-fordulatos-elete';
+        picture.width = "400";
+        document.querySelector('.container').appendChild(picture);
+
+    </script>
+</body>
+
+</html>

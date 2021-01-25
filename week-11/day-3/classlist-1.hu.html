@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: ClassList</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .lufi {
+            background-color: lime;
+            border-radius: 100%;
+        }
+
+        .körte {
+            background: lime;
+            padding: 2rem;
+            text-decoration: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="alma">alma</p>
+    <p class="lufi">lufi</p>
+    <p class="cica red-dot">cica</p>
+    <p>delfin</p>
+
+    <script>
+        const playWithClass = document.querySelectorAll('p');
+        console.log(playWithClass);
+        playWithClass.forEach((element, index) => {
+            console.log(playWithClass[index]);
+        });
+        let alma = playWithClass[0]
+        console.log(playWithClass[3].classList.contains('delfin'));
+        if (playWithClass[3].classList.contains('delfin')) {
+            alma.textContent = 'körte';
+        }
+        if (playWithClass[1].classList.contains('alma')) {
+            playWithClass[2].textContent = 'kutya';
+        }
+        alma.classList.add('red');
+        // alma.classList.add('new-class')
+        
+        let lufi = playWithClass[1];
+        lufi.style.width = '5%';
+
+    </script>
+
+</body>
+
+</html>
