@@ -12,9 +12,9 @@
   <h1>Cocktails</h1>
   <nav>
     <ul>
-      <li> <a href=`/"All" %>`>All</a> </li>
+      <li><a href="/">all</a></li>
       <% alcoholList.forEach((element)=>{ %>
-        <li> <a href=`/<%=element %>`> <%= element %> </a> </li>
+        <li> <a href="/?alcohol=<%=element %>"> <%= element %> </a> </li>
         <% }); %>
     </ul>
   </nav>
