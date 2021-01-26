@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cica</title>
+</head>
+<body>
+    <header>
+        <%- include('navbar.ejs') %>
+    </header>
+    <main>
+        <div><img src="static/cica<%= number %>.jpg"></div>
+        <div><%- include('givenNumber.ejs', { number: number }) %></div>
+        <div><%# comment %></div>
+        <!-- %% saját magát fogja escepélni tehát kiírja magát :-) -->
+        <div><%% hello ez most mi %></div>
+        <!-- HTML comment -->
+    </main>
+</body>
+</html>

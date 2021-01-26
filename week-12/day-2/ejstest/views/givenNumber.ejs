@@ -1,0 +1,10 @@
+<h1>Given number:</h1>
+<% if (number > 3) { %>
+<h2><%= number %></h2>
+<% } else { %>
+<ul>
+<% for (let i = 1; i <= number; i++) { %>
+<li><%= i %></li>
+<% } %>
+</ul>
+<% } %>

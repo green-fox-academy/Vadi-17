@@ -13,10 +13,11 @@ app.set('view engine', 'ejs');
 
 app.use('/assets', express.static(path.resolve(__dirname + '/public')));
 
-// http://localhost:3000/?name=Vadi
+const todos = ['get up', 'survive', 'go back to bed'];
+
 app.get('/', (req, res) => {
     res.render('home', {
-        name: req.query.name ? req.query.name : "Guest",
+        name: todos
     });
 });
 

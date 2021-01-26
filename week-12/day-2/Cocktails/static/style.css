@@ -1,0 +1,43 @@
+*{
+    background-color: blanchedalmond;
+}
+h1 {
+    letter-spacing: 2px;
+ 
+    color: rgb(48, 48, 48);
+    margin-bottom: 2rem;
+  } 
+  table {
+    width: auto;
+  }
+
+  td:nth-child(2) {
+    width: 100px;
+    text-align: center;
+    }
+th{
+  height: 40px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  
+  } 
+li{
+    display: inline;
+    margin: 14px;
+    text-transform:uppercase;
+}
+p{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+td{
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+span{
+    font-weight: 200;
+}
+
+  
