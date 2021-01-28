@@ -1,17 +1,43 @@
-let what = "double";
-let numbers = [1, 2, 3, 5, 10];
-let outputNumber
 
-if(!what){
-    console.log("Kérem, adja meg a műveletet!");
-    return;
-}else if(what==="sum"){
-    outputNumber=numbers.reduce((a, b) => a + b, 0)
-}else if(what==="multiply"){
-    outputNumber=numbers.reduce( (a,b) => a * b )
-}else if(what==="double"){
-    outputNumber=numbers.map((xx) => xx * 2);
-}else{
-    console.log("Nem definiált művelet!");
-}
-console.log(outputNumber);
+'use strict';
+import express from 'express';
+const app = express();
+const PORT = 8080;
+app.use(express.json());
+
+app.post('/dountil/', (req, res) => { 
+    const what = req.body.what;
+    const numbers = req.body.numbers;
+    let outputObject
+    if (!what) {
+        outputObject = {
+            "error": "Kérem, adja meg a műveletet!"
+        }
+    } else if (what === "sum") {
+        outputObject = {
+            "result": numbers.reduce((a, b) => a + b, 0)
+        }
+
+    } else if (what === "multiply") {
+        outputObject = {
+            "result": numbers.reduce((a, b) => a * b)
+        }
+    } else if (what === "double") {
+        outputObject = {
+            "result": outputObject = numbers.map((xx) => xx * 2)
+        }
+    } else {
+        outputObject = {
+            "error": "Nem definiált művelet!"
+        }
+    }
+    res.send(JSON.stringify(outputObject));
+});
+app.listen(PORT, () => {
+    console.log(`Server is running and listen on port ${PORT}.`);
+});
+
+
+
+
+
