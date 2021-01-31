@@ -10,6 +10,8 @@ https.get('https://swapi.dev/api/people/1/', (resp) => {
 
   // The whole response has been received. Print out the result.
   resp.on('end', () => {
+    console.log("ggg");
+    alert("ggg");
     console.log(JSON.parse(data).name);
   });
 

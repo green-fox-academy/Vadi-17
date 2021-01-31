@@ -1,26 +1,37 @@
 [
-    {
-      "id": 1,
-      "firstName": "Dávid",
-      "lastName": "Hasselhoff",
-      "birthDate": "1990-03-15",
-      "gender": "m",
-      "searchingFor": "f"
-    },
-    {
-      "id": 2,
-      "firstName": "Barbara",
-      "lastName": "Kunszt",
-      "birthDate": "1990-03-15",
-      "gender": "f",
-      "searchingFor": "m"
-    },
-    {
-      "id": 3,
-      "firstName": "Dorina",
-      "lastName": "Szentkirályi",
-      "birthDate": "1995-02-05",
-      "gender": "f",
-      "searchingFor": "m"
-    }
-  ]
+	{
+		"id": 1,
+		"firstName": "Dávid",
+		"lastName": "Hasselhoff",
+		"birthDate": "1992-03-15",
+		"gender": "m",
+		"searchingFor": "m"
+	},
+	{
+		"id": 2,
+		"firstName": "Barbara",
+		"lastName": "Kunszt",
+		"birthDate": "1990-03-15",
+		"gender": "f",
+		"searchingFor": "m"
+	},
+	{
+		"id": 4,
+		"firstName": "Vadi",
+		"lastName": "A király",
+		"birthDate": "1965-05-17",
+		"gender": "f",
+		"searchingFor": "m",
+		"new key": "valami"
+	},
+	{
+		"firstName": "Vadas",
+		"lastName": "István",
+		"id": 5
+	},
+	{
+		"firstName": "Vadas",
+		"lastName": "István",
+		"id": 6
+	}
+]

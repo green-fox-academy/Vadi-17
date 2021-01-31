@@ -72,8 +72,10 @@ const forecasts = [
   ];
 
 
-app.get('/', (req, res) => {
+app.get('/:name', (req, res) => {
+  console.log(req.params);
     res.render('home', {
+      
         name: req.query.name ? req.query.name : "Guest",
     });
 });

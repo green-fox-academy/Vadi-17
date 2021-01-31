@@ -28,7 +28,6 @@ app.post('/translate/', (req, res) => {
         outputObject = {
             "error": "Ezt nem tudom lefordítani!"
         }
-
     }
     res.send(JSON.stringify(outputObject));
 });

@@ -1,11 +1,14 @@
 
 import express from 'express';
+import cors from 'cors';
 import SinglesRepository from './SinglesRepository.js';
 // import singles from './data/singles.json'; // not working, still experimental feature
 
 const port = 3000;
 const app = express();
 app.use(express.json());
+// kell mert különben nem látja egymást a két szerver
+app.use(cors());
 
 
 app.get('/singles', (req, res) => {
@@ -17,6 +20,7 @@ app.get('/singles', (req, res) => {
 
 app.post('/singles', (req, res) => {
     const single = req.body;
+    console.log(single);
     const repository = new SinglesRepository();
     const createdSingle = repository.create(single);
     if (createdSingle === false) {
@@ -27,9 +31,9 @@ app.post('/singles', (req, res) => {
 });
 
 // /singles/2
-app.put('/singles/:id', (req, res) => {
-    // update single by id
-    const singleId = req.params.id;
+app.put('/singles/:ide', (req, res) => {
+    // update single by ide
+    const singleId = req.params.ide;
     const singleToBeUpdated = req.body;
 
     const repository = new SinglesRepository();

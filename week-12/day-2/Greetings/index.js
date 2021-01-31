@@ -15,6 +15,7 @@ app.use('/assets', express.static(path.resolve(__dirname + '/public')));
 
 // http://localhost:3000/?name=Vadi
 app.get('/', (req, res) => {
+    console.log("ss",__dirname);
     res.render('home', {
         name: req.query.name ? req.query.name : "Guest",
     });

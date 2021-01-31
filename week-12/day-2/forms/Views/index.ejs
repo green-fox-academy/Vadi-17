@@ -1,0 +1,38 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Itt a bodyban menü amiben egy lista van egyetlen eleme ami elküld minket egy
+regisztrációs linkre tehát elküld a /reg-re
+a/regre kell megírni a regisztrációt -->
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/reg">Regisztráció</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Figyelni hogy a isRegistration logikai, csak utána megy rá az if -->
+        <!-- A typeof olyan változót is tud kezelni ami nem létezik lehetne !nem undefind-->
+        <% if (typeof isRegistration === 'boolean') { %>
+            <% if (isRegistration === true) { %>
+                <% if (isRegistrationSuccessful === true) { %>
+                    <!-- Ha sikeres regisztráció után vagyunk akkor itt vagyunk -->
+                    <p>Szia <%= username %>, sikeresen regisztráltál! <a href="/login">Jelentkezz be!</a></p>
+                <% } else { %>
+                    <!-- Itt van incudolva a regisztrációs form -->
+                    <!-- A % után nem = hanem - van, ezért úgy értékeli ki hogy nem escape-li a html-t -->
+                    <!-- egyenlőségre kiírná a forráskódot, ahelyett hogy beillesztené és végrehajtaná -->
+                    <%- include('regForm') %>
+                <% } %>
+            <% } %>
+        <% } %>
+    </main>
+</body>
+</html>
