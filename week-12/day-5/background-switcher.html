@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random háttérkép</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            background-size: cover;
+            background-position: center center;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="background-switcher.js"></script>
+    <script>
+        function refreshBackground() {
+            document.querySelector('body').style.backgroundImage = `url('https://loremflickr.com/g/1280/800/hungary/?a=${Math.random() * 10000000000})`;
+        }
+        refreshBackground();
+        setInterval(() => {
+            console.log('refresh');
+            refreshBackground();
+        }, 5000);
+    </script>
+</body>
+
+</html>

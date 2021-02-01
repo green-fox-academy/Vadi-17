@@ -2,13 +2,12 @@
 
 const mapWith = (array, callback) => {
   let output = [];
+  for (let item of array) {
+    output.push(callback(item));
+}
 
-  for (let i = 0; i < array.length; i++) {
-    output.push(callback(array[i]));
-  }
-  // The mapWith() function should iterate over the given array and call the callback function on every element.
-  // It stores the callback return values in the output.
-  // The mapWith() should return with the output array.
+  // A mapWith () függvénynek végig kell iterálnia a tömbön, és minden elemnél meg kell hívnia a megadott callback függvényt.
+  // A mapWith () -nek vissza kell térnie a kimeneti tömbhöz.
 
   return output;
 }
@@ -16,11 +15,17 @@ const mapWith = (array, callback) => {
 const addOne = (number) => {
   return number + 1;
 }
+const multOne = (number) => {
+  return number * 2;
+}
 
 // Exercise 1:
 
 console.log(mapWith([1, 2, 3], addOne));
 //expected result: [2, 3, 4]
+
+console.log(mapWith([1, 2, 6], multOne));
+//expected result: [2, 4, 12]
 
 // Exercise 2:
 
@@ -28,5 +33,13 @@ console.log(mapWith([1, 2, 3], addOne));
 
 const words = ['map', 'reduce', 'filter'];
 
-// console.log(mapWith(words, removeSecondLetter));
+function removeSecondLetter(string){
+  let result ="";
+  for (let i = 0; i <= string.length; i+=2) {
+    result = result + string.slice(i, i+1)
+  }
+  return result;
+}
+
+console.log(mapWith(words, removeSecondLetter));
 // expected result: ['mp','rdc', 'fle']

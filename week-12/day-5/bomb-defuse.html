@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bomba hatástalanítása</title>
+</head>
+
+<body>
+    <div class="display">10</div>
+    <button>Hatástalanítás</button>
+
+    <p id="demo"></p>
+    <script>
+        const globals = {
+            time: 10000,
+            interval: null,
+            ms: 100
+        }
+        function updateTimer() {
+            globals.time -= globals.ms;
+            if (globals.time > 0) {
+                const display = document.querySelector('.display');
+                display.textContent = (globals.time / 1000);
+            } else {
+                clearInterval(globals.interval);
+                document.getElementById("demo").innerHTML = "A Bomba felrobbant";
+                document.querySelector('button').setAttribute("disabled", true);
+
+            }
+        }
+        globals.interval = setInterval(updateTimer, globals.ms);
+
+
+        document.querySelector("button").addEventListener("click", stopTheBomb);
+        function stopTheBomb() {
+            clearInterval(globals.interval);
+            document.getElementById("demo").innerHTML = "A Bomba hatástalanítva!";
+            document.querySelector('button').setAttribute("disabled", true);
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- const globals = {
+    time: 10000,
+    interval: null,
+    ms: 100
+};
+const h1 = document.getElementsByClassName('display')
+h1.textContent = globals.time / 100 + " ms"
+function updateTimer() {
+    globals.time -= globals.ms;
+    const h1 = document.getElementsByClassName('display')
+    h1.textContent = globals.time / 100 + " ms"
+}
+
+globals.time = 10000;
+globals.interval = setInterval(updateTimer, globals.ms); -->
