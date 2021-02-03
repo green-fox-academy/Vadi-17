@@ -1,0 +1,31 @@
+<html>
+<body>
+<h2>JavaScript Promise</h2>
+<p id="demo">dd</p>
+<script>
+
+function myDisplayer(some) {
+  document.getElementById("demo").innerText = some;
+}
+
+let myPromise = new Promise(function(siker, kudarc) {
+  let x = 0;
+
+// some code (try to change x to 5)
+
+  if (x == 0) {
+    siker("Siker");
+    } else {
+        kudarc("ErrorKUDARC");
+  }
+});
+
+myPromise.then(
+    function(value) {myDisplayer(value);},
+    function(error) {myDisplayer(error);}
+);
+
+</script>
+
+</body>
+</html>
