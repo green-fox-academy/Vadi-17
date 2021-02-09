@@ -1,0 +1,27 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70vh;
+    border: rgb(62, 148, 236) solid 25px;
+    margin: 20vh auto;
+}
+td,th{
+    border: 1px solid #b4b4b4;
+    padding: 8px;
+    text-align: left;
+    padding-left: 15px;
+  }
+  
+  th {
+    background-color: rgb(27, 30, 36);
+    color: floralwhite;
+    padding: 1.1em;
+  }
+  td[data-currency]::before {
+    content: attr(data-currency);
+    margin: 5px ;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

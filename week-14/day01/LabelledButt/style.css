@@ -1,0 +1,57 @@
+
+body {
+    background-color: rgb(49, 56, 65);
+  }
+  
+.container {
+    width: 50%;
+    margin: 35vh auto;
+  }
+  button {
+    display: block;
+    border-radius: 6px;
+    background: rgb(24, 31, 37);
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin: 5vh;
+    width: 42px;
+    height: 43px;
+    color: white;
+    padding: 10px;
+    border: none;
+  }
+  
+  button:hover {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  button:hover::after {
+    position: relative;
+    top: -1.5rem;
+    margin-left: 31px;
+    padding: 10px 25px;
+    content: attr(data-action);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: none;
+  }
+  .btn-delete:hover{
+    color:rgb(255, 86, 65);
+  }
+  .btn-delete:hover::after{
+    background-color: rgb(255, 86, 65);
+    color: wheat;
+  }
+  .btn-sure:hover{
+    color:green;
+  }
+  .btn-sure:hover::after{
+    background-color: green;
+    color: wheat;
+  }
+  button:focus{  
+    background-color: rgb(12, 11, 11);
+  }
