@@ -7,7 +7,7 @@ body {
     width: 50%;
     margin: 35vh auto;
   }
-  button {
+  [class|=btn] {
     display: block;
     border-radius: 6px;
     background: rgb(24, 31, 37);
