@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            border: rgb(10, 77, 145) solid 10px;
+            margin: auto;
+        }
+
+        td,
+        thead {
+            border: 1px solid #b4b4b4;
+            padding: 8px;
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        thead {
+            background-color: rgb(15, 30, 59);
+            color: floralwhite;
+            padding: 1.1em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        h1 {
+            margin: 0 40%
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Restaurants</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Street</td>
+                <td>Borough</td>
+                <td>Cuisine</td>
+                <td>Zipcode</td>
+                <td>Score</td>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+
+        </tbody>
+    </table>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

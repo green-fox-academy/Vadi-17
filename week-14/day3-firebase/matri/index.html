@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noSQL</title>
+    <style>
+        #users th,
+        #users td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            /* padding: 4px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>NOSQL</h1>
+    <div>
+        <button type="button" onclick="getAll()">Get ALL</button>
+    </div>
+    <div>
+        <input type="text" id="search-username" placeholder="username">
+        <button type="button" onclick="getUserByUsername()">Get one</button>
+    </div>
+
+    <table id="users">
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>password</th>
+                <th>last_name</th>
+                <th>first_name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div>
+        <div>
+            <input type="text" id="username" placeholder="username">
+        </div>
+        <div>
+            <input type="text" id="password" placeholder="password">
+        </div>
+        <div>
+            <input type="text" id="last_name" placeholder="last name">
+        </div>
+        <div>
+            <input type="text" id="first_name" placeholder="first name">
+        </div>
+        <div>
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" id="update-btn">Update</button>
+        </div>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
