@@ -35,10 +35,37 @@
         h1 {
             margin: 0 40%
         }
+.buttons{
+    margin: 0 10%
+}
+        button {
+            border: none;
+            width: 82px;
+            height: 32px;
+            background-color: #eee;
+            /* transition: all ease-in-out 0.2s; */
+            cursor: pointer;
+        }
+
+        button:hover {
+            border: 1px solid #888;
+            background-color: #ddd;
+        }
     </style>
 </head>
 
 <body>
+    <div class="buttons">
+        <button onclick="myFunction1()", title="Minden adatot lekérdez, megmutat">Get All</button>
+        <button onclick="myFunction2()", title="Minden adatot lekérdez, megmutat">Click me2</button>
+        <button onclick="myFunction3()", title="Minden adatot lekérdez, megmutat">Click me3</button>
+        <button onclick="myFunction4()", title="restaurant .where borough = Bronx">Click me4</button>
+        <button onclick="myFunction5()", title="Minden adatot lekérdez, megmutat">Click me5</button>
+        <button onclick="myFunction6()", title="Minden adatot lekérdez, megmutat">Click me6</button>
+        <button onclick="myFunction7()", title="Minden adatot lekérdez, megmutat">Click me7</button>
+
+        <button id="myBtn">Ez segít</button>
+    </div>
     <h1>Restaurants</h1>
     <table>
         <thead>
@@ -55,6 +82,7 @@
         <tbody id="myTable">
 
         </tbody>
+        <p id="demo"></p>
     </table>
 
 
