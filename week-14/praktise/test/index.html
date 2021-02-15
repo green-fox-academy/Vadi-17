@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>NoteBook</title>
+</head>
+
+<body>
+    
+    <main>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div>
+                    <a class="navbar-nav active" href="#">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="navbar-nav" aria-current="page" href="tickets.html">Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section>
+                <h1>Create new ticket</h1>
+            </section>
+            <form id="create-ticket" method="POST" action="/tickets.html">
+                <div class="mb-3 row">
+                    <label for="selected-item" class="col-sm-2 col-form-label">Name:</label>
+                    <div class="col-sm-10">
+                        <select id="selected-item" class="form-select" aria-label="Default select example">
+                            <option selected value="1">Egg</option>
+                            <option value="2">Tom</option>
+                            <option value="3">Mary</option>
+                            <option value="4">Brian</option>
+                            <option value="5">Daisy</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="manu" class="col-sm-2 col-form-label">Manufacturer:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="manu">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="serial-number" class="col-sm-2 col-form-label">Serial Number:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="serial-number">
+                    </div>
+                </div>
+                <fieldset class="row mb-3">
+                    <legend class="col-form-label col-sm-2 pt-0">Description:</legend>
+                    <div class="col-sm-10">
+
+                        <div class="form-floating">
+                            <textarea class="form-control" rows="4" id="floatingTextarea"></textarea>
+
+                        </div>
+                    </div>
+                </fieldset>
+                <button id="report-btn" type="submit" class="btn btn-secondary">Report</button>
+        </div>
+        <div class="alert alert-danger d-none" role="alert" id="form-error">
+            </form>
+        </div>
+
+        <!--     tickets     -->
+        <div class="container2 d-none">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div>
+                    <a class="navbar-nav" href="index.html">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="navbar-nav active" aria-current="page" href="tickets.html">Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section>
+                <h1 id="h1">Reported tickets</h1>
+            </section>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Reporter</th>
+                        <th scope="col">Manifacturer</th>
+                        <th scope="col">Serial number</th>
+                        <th scope="col">Discription</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="report-datas">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

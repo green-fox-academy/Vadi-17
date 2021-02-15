@@ -1,0 +1,20 @@
+  
+* {
+    margin: 5px;
+}
+
+#report-btn {
+    width: 50%;
+    background-color: rgb(171, 177, 177);
+    color: black
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.active {
+    text-decoration: none;
+    color: grey;
+}
